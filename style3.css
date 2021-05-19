@@ -1,0 +1,150 @@
+header{
+    height: 64px;
+}
+img{
+    object-fit: cover;
+}
+.logo{
+   text-align: center;
+   padding-top: 15px;
+}
+header img{
+    width:50%;
+}
+.photo{
+    height: 248px;
+    width: 100%;
+}
+.photo img{
+    
+    height: 100%;
+    width:100%;
+    border: 1px solid white;
+}
+.menu{
+    background-color:#f6f6f6 ;
+    border-radius: 45px 45px 0px 0px ;
+    position: relative;
+    top: -55px;
+}
+.btn{
+    background-color:white;
+    border-radius: 15px 15px 10px 10px;
+    width: 320px;
+    margin: auto;
+    height: 67px;
+    pointer-events: visiblePainted;
+    
+}
+.menu div h3{
+    margin-left:15px;
+    position: relative;
+    top:10px;
+}
+.btn div p{
+    margin-left:15px;
+    position: relative;
+    top:-10px
+}
+.prix{
+    position:relative;
+    left: 272px;
+    bottom: 34px;
+}
+footer{
+    background-color: #353535;
+}
+footer p{
+    color:white;
+}
+.logo2{
+    margin-left:25px;
+    padding-top: 25px;
+}
+.logo2 img{
+width: 40%;
+
+}
+.conteneur1{
+    display: flex;
+    margin-left:25px;
+    position: relative;
+    top: 15px;
+}
+.conteneur1 p{
+    margin-top: 1px;
+    margin-left:15px;
+}
+.conteneur2{
+    display: flex;
+    margin-left:25px;
+}
+.conteneur2 p{
+    margin-top: 1px;
+    margin-left:15px;
+}
+.conteneur3{
+    margin-left:25px;
+    position: relative;
+    bottom: 30px;
+}
+.contact{
+    margin-top: -15px;
+}
+footer  i{
+color: white;
+}
+
+.btn .selection{
+    width: 59px;
+    height:100%;
+    background-color:#99e2d0 ;
+    position:relative;
+    left:262px;
+    border-radius: 0px 15px 15px 0px;
+    bottom: 108px;
+    opacity: 0;
+}
+.selection i{
+    color: white;
+    font-size: x-large;
+    margin-left: 29px;
+    margin-top: 33px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: loader 1s linear;
+}
+@keyframes loader {
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+.selection{
+    animation-duration: 1s;
+    animation-name: selection;
+    animation-direction:normal;
+  }
+  
+  @keyframes selection {
+    from {
+      margin-left:100%;
+      width:300%
+    }
+    to {
+      margin-left:0%;
+      width:100%;
+    }
+  }
+.btn{
+    animation: fadein 5s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.btn:hover,.selection:hover{
+  opacity: 1;
+}
