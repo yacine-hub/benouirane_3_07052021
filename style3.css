@@ -1,5 +1,23 @@
+@font-face{
+    font-family: roboto;
+    src: url(police/Roboto-Thin.ttf) format("truetype");   
+}
+@font-face{
+    font-family: roboto2;
+    src: url(police/Roboto-Regular.ttf) format("truetype");   
+}
+@font-face{
+    font-family: shrikhand;
+    src: url(police/Shrikhand-Regular.otf) format("truetype");   
+}
+body{
+    font-family: roboto;
+}
 header{
     height: 64px;
+}
+main{
+    height: min-content;
 }
 img{
     object-fit: cover;
@@ -10,6 +28,12 @@ img{
 }
 header img{
     width:50%;
+}
+header i{
+    position: relative;
+    right: 55px;
+    bottom: 6px;
+    font-size: x-large;
 }
 .photo{
     height: 248px;
@@ -26,36 +50,77 @@ header img{
     border-radius: 45px 45px 0px 0px ;
     position: relative;
     top: -55px;
+    height: 1100px;
 }
+
+
+h1{
+    margin-left: 23px;
+    font-family: shrikhand;
+}
+h2{
+    margin-left:23px;
+    border-bottom: 5px solid #99E2D0;   
+}
+.partie1{
+    width: 59px;
+}
+.partie2{
+    width: 44px;
+}
+.partie3{
+    width: 52px;
+}
+
+
 .btn{
     background-color:white;
     border-radius: 15px 15px 10px 10px;
     width: 320px;
     margin: auto;
     height: 67px;
-    pointer-events: visiblePainted;
-    
+    position: relative;
 }
 .menu div h3{
     margin-left:15px;
     position: relative;
     top:10px;
+    font-family: roboto2;
+    font-size: 15px;
 }
 .btn div p{
     margin-left:15px;
     position: relative;
-    top:-10px
+    font-weight: bold;
+    font-size: 13px;
 }
 .prix{
-    position:relative;
+    position:absolute;
     left: 272px;
-    bottom: 34px;
+    bottom: 0px;
+    font-family: roboto2;
+}
+.commande{
+    background: linear-gradient(to bottom,#FF79DA,#9356DC );
+    border-radius: 5em 5em 5em 5em;
+    margin: auto;
+    width: 216px;
+    height: 50px;
+    margin-top: 50px ;
+}
+.commande p {
+    padding-top: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 footer{
     background-color: #353535;
+    
 }
 footer p{
     color:white;
+    font-weight: 600;
 }
 .logo2{
     margin-left:25px;
@@ -99,43 +164,35 @@ color: white;
     width: 59px;
     height:100%;
     background-color:#99e2d0 ;
-    position:relative;
-    left:262px;
+    position:absolute;
     border-radius: 0px 15px 15px 0px;
-    bottom: 108px;
-    opacity: 0;
+    bottom: 0;
+    right: -60px;
+    visibility: hidden;
 }
 .selection i{
     color: white;
     font-size: x-large;
-    margin-left: 29px;
-    margin-top: 33px;
-    transform: translate(-50%, -50%) rotate(0deg);
-    animation: loader 1s linear;
+    margin-left: 18px;
+    margin-top: 22px;
+    
+} 
+.entrees, .plats, .desserts{
+    animation: fadein 2s;
+    
 }
-@keyframes loader {
-    100%{
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+.entrees{
+    animation-fill-mode: backwards; 
+
 }
-.selection{
-    animation-duration: 1s;
-    animation-name: selection;
-    animation-direction:normal;
-  }
-  
-  @keyframes selection {
-    from {
-      margin-left:100%;
-      width:300%
-    }
-    to {
-      margin-left:0%;
-      width:100%;
-    }
-  }
-.btn{
-    animation: fadein 5s;
+.plats{
+    animation-delay:2s ;
+    animation-fill-mode: both;
+}
+.desserts{
+    animation-delay:3s;
+    animation-fill-mode: both;
+    margin-bottom: 15px;
 }
 @keyframes fadein {
     from {
@@ -145,6 +202,19 @@ color: white;
         opacity:1;
     }
 }
-.btn:hover,.selection:hover{
-  opacity: 1;
+.btn:hover .selection{
+    
+    right:0;
+    transition:right 1s ;
+    visibility: visible;
+  
 }
+.btn:hover .prix{
+    left: 217px ;
+    transition:left 1s ;
+}
+.btn:hover i{
+    transform:rotate(360deg);
+    transition-duration: 1s;
+}
+
