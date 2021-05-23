@@ -10,14 +10,18 @@
     font-family: shrikhand;
     src: url(police/Shrikhand-Regular.otf) format("truetype");   
 }
+
+* * {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} *
+
 body{
     font-family: roboto;
 }
 header{
     height: 64px;
-}
-main{
-    height: min-content;
 }
 img{
     object-fit: cover;
@@ -26,8 +30,24 @@ img{
    text-align: center;
    padding-top: 15px;
 }
+
 header img{
     width:50%;
+}
+.titre{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 45px 45px 0px 0px;
+    padding-top: 18px;
+    margin-bottom:-20px;
+    position: relative;
+    top: -46px;
+    background-color:#f6f6f6 ;
+}
+.titre i{
+    margin-right:37px;
+    font-size: 23px;
+    margin-top: 19px;
 }
 header i{
     position: relative;
@@ -35,10 +55,11 @@ header i{
     bottom: 6px;
     font-size: x-large;
 }
-.photo{
+.photo figure{
     height: 248px;
-    width: 100%;
+    min-width: 321px;
 }
+
 .photo img{
     
     height: 100%;
@@ -47,21 +68,20 @@ header i{
 }
 .menu{
     background-color:#f6f6f6 ;
-    border-radius: 45px 45px 0px 0px ;
-    position: relative;
-    top: -55px;
-    height: 1100px;
 }
 
 
 h1{
     margin-left: 23px;
     font-family: shrikhand;
+    margin-top: 15px;
 }
 h2{
     margin-left:23px;
-    border-bottom: 5px solid #99E2D0;   
+    border-bottom: 5px solid #99E2D0;  
+    margin-bottom: 15px; 
 }
+
 .partie1{
     width: 59px;
 }
@@ -76,28 +96,31 @@ h2{
 .btn{
     background-color:white;
     border-radius: 15px 15px 10px 10px;
-    width: 320px;
-    margin: auto;
+    min-width: 320px;
+    margin: 0 15px;
     height: 67px;
     position: relative;
+    margin-bottom: 15px;
+}
+.conteneur{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-top:4px;
+    
 }
 .menu div h3{
     margin-left:15px;
-    position: relative;
-    top:10px;
     font-family: roboto2;
-    font-size: 15px;
+    font-size: 17px;
+    padding-top: 11px;
 }
 .btn div p{
-    margin-left:15px;
-    position: relative;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
 }
 .prix{
-    position:absolute;
-    left: 272px;
-    bottom: 0px;
+    margin-right: 16px;
     font-family: roboto2;
 }
 .commande{
@@ -106,13 +129,17 @@ h2{
     margin: auto;
     width: 216px;
     height: 50px;
-    margin-top: 50px ;
+    margin-top: 45px ;
 }
 .commande p {
     padding-top: 15px;
     text-align: center;
     color: white;
     font-weight: bold;
+}
+.bloc{
+    padding-bottom: 82px;
+
 }
 footer{
     background-color: #353535;
@@ -127,14 +154,13 @@ footer p{
     padding-top: 25px;
 }
 .logo2 img{
-width: 40%;
+width: 33%;
 
 }
 .conteneur1{
     display: flex;
     margin-left:25px;
-    position: relative;
-    top: 15px;
+    margin-top: 20px;
 }
 .conteneur1 p{
     margin-top: 1px;
@@ -143,18 +169,19 @@ width: 40%;
 .conteneur2{
     display: flex;
     margin-left:25px;
+    margin-top:13px;
 }
 .conteneur2 p{
-    margin-top: 1px;
-    margin-left:15px;
+    
+    margin-left:8px;
 }
 .conteneur3{
     margin-left:25px;
-    position: relative;
-    bottom: 30px;
+    padding-bottom: 35px;
+    margin-top:13px;
 }
 .contact{
-    margin-top: -15px;
+    margin-top: 14px;
 }
 footer  i{
 color: white;
@@ -210,9 +237,28 @@ color: white;
   
 }
 .btn:hover .prix{
-    left: 217px ;
-    transition:left 1s ;
+    margin-right: 76px;
+    transition:margin-right 1s;
 }
+
+.btn:hover .reduction{
+    display: none;
+    transition: display 1s;
+}
+.points{
+    visibility: hidden;
+    position: absolute;
+    left: 289px;
+    visibility: hidden;
+    
+}
+
+.btn:hover .points{
+   visibility: visible;
+  left: 219px;
+    transition: left 1s;
+}
+
 .btn:hover i{
     transform:rotate(360deg);
     transition-duration: 1s;
