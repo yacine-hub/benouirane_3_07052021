@@ -1,3 +1,8 @@
+* * {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} *
 
 .loader-conteneur{
     position: fixed;
@@ -33,8 +38,10 @@
     }
 .loader-conteneur img{
     width: 50%;
-    margin-top: 250px;
-    margin-left:100px
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 29%;
 }
 @font-face{
     font-family: roboto;
@@ -48,7 +55,7 @@ body{font-family: roboto;
 
 }
     header{
-    height: 64px;
+    height: auto;
 }
 .logo{
    text-align: center;
@@ -58,27 +65,27 @@ header img{
     width:50%;
 }
 .localisation{
-    border:solid 1px #eaeaea;
+    
     background-color: #eaeaea;
-    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top:15px;
+    padding-bottom: 15px;
 }
 .localisation p{
-    text-align: center;
-    margin: auto;
     font-weight: 900;
 }
 .localisation i{
-    position: relative;
-    top: 18px;
-    left: 102px;
+    
+    margin-right: 15px;
 }
 .decouverte{
     
     background-color: #f6f6f6;
-    border:solid rgb(249, 242, 242);
-    height: 287px;
+    padding-bottom: 73px;
 }   
 h1{
+    padding-bottom: 21px;
     padding-top: 30px;
     text-align: center;
     font-family: sans-serif;
@@ -97,6 +104,11 @@ h2{
     margin:0 auto;
     width: 216px;
     height: 50px;
+    margin-top: 32px;
+}
+.les-restaurants:hover{
+    box-shadow: 0px 2px 7px 10px grey; 
+    filter: opacity(0.5) ;
 }
 
 .les-restaurants p{
@@ -106,17 +118,24 @@ h2{
     font-weight: bold;
 }
 .fonction{
-    height: 440px;
+    height: auto;
 }
 .fonction h2{
     padding-top: 50px;
+    padding-bottom: 28px;
+    text-align: center;
+    margin-right: 184px;
+    
 }
-.fonction div{
+.fonction .btn-fonction{
     border-radius: 1.7em 1.7em 1.7em 1.7em;
     margin:0 auto;
     width: 325px;
     margin-bottom:20px;
     height: 76px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .choix{
     background-color:#f6f6f6;
@@ -126,40 +145,39 @@ h2{
 }
 .degustation{
     background-color: #f5edff;
+    margin-bottom: 70px;
     
 }
-.btn-fonction i{
-    position: relative;
-    bottom: 15px;
-    left: 50px;
-}
-.fonction p{
+.fonction .selection{
     font-size: 15px;
-    text-align:center;
-    position: relative;
-    bottom: 48px;
     font-family:roboto2;
     font-weight: 600;
+    margin-right: 84px;
+    margin-left: 15px;
 }
 .btn-fonction div{
     position: relative;
     background-color: #9356dc;
     width: 22px;
     height: 22px;
-    line-height: 118px;
-    top:25px;
-    right:163px;
+    line-height: 23px;
+    right:13px;
+    border-radius: 12px 12px 12px 12px;
 }
 .btn-fonction div p{
     color:white;
+    text-align:  center;
 }
 .Restaurants{
     background-color: rgb(249, 242, 242);
-    height: 1226px;
+    height: 1200px;
+    
 }
 .Restaurants h2{
     padding-top: 50px;
-    margin-left:15px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-right: 184px;
 }
 figure {
     position: relative;
@@ -188,15 +206,17 @@ figcaption{
     bottom: -70px;
     border:1px solid white;
 }
+figcaption div{
+    display: flex;
+}
 h3{
     margin-left:15px;
     font-family:roboto2;
+    margin-top: 15px;
 
 }
 figcaption p{
     margin-left:15px;
-    position: absolute;
-    top: 25px;
 }
 .Restaurants i {
     position: absolute;
@@ -206,6 +226,7 @@ figcaption p{
 }
 footer{
     background-color: #353535;
+
 }
 footer p{
     color:white;
@@ -214,16 +235,16 @@ footer p{
 .logo2{
     margin-left:25px;
     padding-top: 25px;
+    width: 100%;
 }
 .logo2 img{
-width: 40%;
+    width: 33%;
 
 }
 .conteneur1{
     display: flex;
     margin-left:25px;
-    position: relative;
-    top: 15px;
+    margin-top: 20px;
 }
 .conteneur1 p{
     margin-top: 1px;
@@ -232,18 +253,19 @@ width: 40%;
 .conteneur2{
     display: flex;
     margin-left:25px;
+    margin-top: 13px;
 }
 .conteneur2 p{
-    margin-top: 1px;
-    margin-left:15px;
+    
+    margin-left: 8px;
 }
 .conteneur3{
     margin-left:25px;
-    position: relative;
-    bottom: 30px;
+    margin-top: 13px;
 }
 .contact{
-    margin-top: -15px;
+    margin-top: 14px;
+    padding-bottom: 38px;
 }
 footer  i{
 color: white;
@@ -259,4 +281,20 @@ color: white;
 .coeurR{
     color:#b261dc;
 }
+@media only screen and (min-width: 480px){
 
+footer{
+    text-align: center;
+}
+.conteneur1{
+    justify-content: center;
+}
+.conteneur2{
+    justify-content: center;
+}
+}
+@media only screen and (min-width: 1000px){
+    h2{margin: auto;
+    }
+
+}
