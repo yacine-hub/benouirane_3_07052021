@@ -1,26 +1,20 @@
 @font-face{
     font-family: roboto;
-    src: url(police/Roboto-Thin.ttf) format("truetype");   
-}
-@font-face{
-    font-family: roboto2;
     src: url(police/Roboto-Regular.ttf) format("truetype");   
 }
+
 @font-face{
     font-family: shrikhand;
     src: url(police/Shrikhand-Regular.otf) format("truetype");   
 }
-
 * * {
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
 } *
-
 body{
     font-family: roboto;
 }
-
 img{
     object-fit: cover;
 }
@@ -57,15 +51,12 @@ header i{
     font-size: x-large;
     padding: 2%;
     left: 11px;
-    position: fixed;
 }
 .photo figure{
     height: 248px;
     min-width: 321px;
 }
-
-.photo img{
-    
+.photo img{  
     height: 100%;
     width:100%;
     border: 1px solid white;
@@ -73,8 +64,6 @@ header i{
 .menu{
     background-color:#f6f6f6 ;
 }
-
-
 h1{
     margin-left: 23px;
     font-family: shrikhand;
@@ -84,8 +73,8 @@ h2{
     margin-left:23px;
     border-bottom: 5px solid #99E2D0;  
     margin-bottom: 15px; 
+    font-weight: 100;
 }
-
 .partie1{
     width: 59px;
 }
@@ -95,8 +84,6 @@ h2{
 .partie3{
     width: 52px;
 }
-
-
 .btn{
     background-color:white;
     border-radius: 15px 15px 10px 10px;
@@ -118,21 +105,17 @@ h2{
     overflow: hidden;
     white-space: nowrap;
 }
-
-
 .menu div h3{
     margin-left:15px;
-    font-family: roboto2;
     font-size: 17px;
     padding-top: 11px;
 }
 .btn div p{
-    font-weight: bold;
     font-size: 15px;
 }
 .prix{
     margin-right: 16px;
-    font-family: roboto2;
+    font-weight: bold;   
 }
 .commande{
     background: linear-gradient(to bottom,#FF79DA,#9356DC );
@@ -140,7 +123,7 @@ h2{
     margin: auto;
     width: 216px;
     height: 50px;
-    margin-top: 45px ;
+    margin-top: 45px;
 }
 .commande:hover{
     box-shadow: 0px 2px 7px 10px grey; 
@@ -171,7 +154,6 @@ footer p{
 }
 .logo2 img{
 width: 33%;
-
 }
 .conteneur1{
     display: flex;
@@ -187,8 +169,7 @@ width: 33%;
     margin-left:25px;
     margin-top:13px;
 }
-.conteneur2 p{
-    
+.conteneur2 p{    
     margin-left:8px;
 }
 .conteneur3{
@@ -202,7 +183,6 @@ width: 33%;
 footer  i{
 color: white;
 }
-
 .btn .selection{
     width: 59px;
     height:100%;
@@ -211,24 +191,19 @@ color: white;
     border-radius: 0px 15px 15px 0px;
     bottom: 0;
     right: -60px;
-    visibility: hidden;
-    
+    visibility: hidden;   
 }
-
 .selection i{
     color: white;
     font-size: x-large;
     margin-left: 18px;
-    margin-top: 22px;
-    
+    margin-top: 22px;   
 } 
 .entrees, .plats, .desserts{
-    animation: fadein 2s;
-    
+    animation: fadein 2s;    
 }
 .entrees{
     animation-fill-mode: backwards; 
-
 }
 .plats{
     animation-delay:2s ;
@@ -247,20 +222,17 @@ color: white;
         opacity:1;
     }
 }
-.btn:hover .selection{
-    
+.btn:hover .selection{   
     right:0;
     transition:right 1s ;
     visibility: visible;
     z-index: 1;
-  
 }
 .btn:hover .prix{
     margin-right: 71px;
     transition:margin-right 800ms;
     margin-left: 7px;
 }
-
 .btn:hover i{
     transform:rotate(360deg);
     transition-duration: 1s;
@@ -269,7 +241,17 @@ color: white;
     cursor: pointer;
     overflow:hidden;
 }
-
+@media only screen and (min-width: 480px){
+    footer{
+        text-align: center;
+    }
+    .conteneur1{
+        justify-content: center;
+    }
+    .conteneur2{
+        justify-content: center;
+    }
+}
 @media only screen and (min-width: 550px){
     .photo img{
         display: block;
